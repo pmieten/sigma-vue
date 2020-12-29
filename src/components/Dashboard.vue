@@ -2,8 +2,17 @@
 <div class="p-grid p-fluid dashboard">
 	<div class="p-col-12 p-lg-4">
 		<div class="card summary">
-			<span class="title">Users</span>
-			<span class="detail">Number of visitors</span>
+			<span class="title">Users Paweł to boss</span>
+			
+			<span class="detail">
+				<testowy></testowy>
+				<testowy></testowy>
+				<b>dsssss</b>
+				<todo-item></todo-item>
+	
+				<test></test>
+				<test></test>
+				Number of visitors</span>
 			<span class="count visitors">12</span>
 		</div>
 	</div>

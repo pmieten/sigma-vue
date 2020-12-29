@@ -69,6 +69,7 @@ import TreeTable from 'primevue/treetable';
 import TriStateCheckbox from 'primevue/tristatecheckbox';
 
 import CodeHighlight from './AppCodeHighlight';
+import Test from './components/Test'
 
 import 'primevue/resources/themes/saga-blue/theme.css';
 import 'primevue/resources/primevue.min.css';
@@ -160,5 +161,10 @@ app.component('ToggleButton', ToggleButton);
 app.component('Tree', Tree);
 app.component('TreeTable', TreeTable);
 app.component('TriStateCheckbox', TriStateCheckbox);
+app.component("Testowy",{ template:<b>Testowy component</b>  });
+app.component('todo-item', {
+    template: <li>This is a todo</li>
+  },);
+app.component('test',Test)
 
 app.mount('#app');

@@ -32,3 +32,17 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+---------------------
+https://www.typescriptlang.org/download
+https://github.com/microsoft/TypeScript-Vue-Starter
+
+
+#
+https://www.npmjs.com/package/vue-separate-files-webpack-loader
+
+
+Login page:
+https://www.primefaces.org/apollo-vue/#/login
