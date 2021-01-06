@@ -73,7 +73,7 @@ import Test from './components/Test'
 
 //import ProductService from './service/ProductService';
 
-//import UserContext from './service/UserContext.ts'
+import {UserContext} from './service/UserContext'
 
 
 import 'primevue/resources/themes/saga-blue/theme.css';
@@ -96,6 +96,7 @@ const app = createApp(App);
 
 app.config.globalProperties.$appState = reactive({ inputStyle: 'outlined' });
 app.config.globalProperties.$primevue = reactive({ ripple: true });
+app.config.globalProperties.$userContext=new UserContext();
 
 app.use(ToastService);
 app.use(router);
@@ -166,10 +167,28 @@ app.component('ToggleButton', ToggleButton);
 app.component('Tree', Tree);
 app.component('TreeTable', TreeTable);
 app.component('TriStateCheckbox', TriStateCheckbox);
-app.component("Testowy",{ template:<b>Testowy component</b>  });
+app.component("Testowy",{ template:"<b>Testowy component</b>"  });
 app.component('todo-item', {
-    template: <li>This is a todo</li>
+    template: "<li>This is a todo</li>"
   },);
 app.component('test',Test)
+
+class Animal {
+  move(distanceInMeters: number = 0) {
+    console.log(`Animal moved ${distanceInMeters}m.`);
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("Woof! Woof!");
+  }
+}
+
+const dog = new Dog();
+dog.bark();
+dog.move(10);
+dog.bark();
+
 
 app.mount('#app');

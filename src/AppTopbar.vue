@@ -27,11 +27,15 @@
 	<Menu id="overlay_menu" ref="menu" :model="items" :popup="true" />	
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
+
 import ProductService from './service/ProductService';
 //import UserContext from './service/use'
+//import {UserContext} from './service/UserContext'
 
-export default {
+
+export default defineComponent({
 	data(){
 		return{
 			items:[
@@ -46,15 +50,21 @@ export default {
 		}
 	},
     methods: {
-        onMenuToggle(event) {
+        onMenuToggle(event: any) {
             this.$emit('menu-toggle', event);
 		},		
-		toggleMenuProfile(event) {
+		toggleMenuProfile(event: any) {
 			
 			this.$refs.menu.toggle(event);
 			var p=new ProductService();
 			p.getProductsSmall();
+
+			alert(this.$userContext.isAuthenticated());
+			
+			this.$userContext.LogIn()
+
+
 		}
     }
-}
+});
 </script>

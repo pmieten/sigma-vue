@@ -3,6 +3,12 @@ const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 
 module.exports = {
+	pages: {
+		index: {
+		  // entry for the page
+		  entry: './src/main.ts'
+		}
+	},
 	devServer: {
 		proxy: 'http://localhost:8081'
 	  },

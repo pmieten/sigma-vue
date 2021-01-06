@@ -1,20 +1,25 @@
-export default class UserContext{
-    
-    private _isAuthenticated : boolean=false;
 
-    public isAuthenticated():boolean
+
+export  class UserContext{
+    
+     isAuthenticatedPrivate : boolean=false;
+
+     isAuthenticated():boolean
     {
-        return this._isAuthenticated;
+     
+        return this.isAuthenticatedPrivate;
     } 
     
-    public logOut()
+     logOut()
     {
-        this._isAuthenticated=false;
+        alert("Logout");
+        this.isAuthenticatedPrivate=false;
     }
 
-    public LogIn()
+     LogIn()
     {
-        this._isAuthenticated=true;
+        alert("LogIn");
+        this.isAuthenticatedPrivate=true;
     }
 
     
