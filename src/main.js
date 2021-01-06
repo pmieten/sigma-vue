@@ -71,6 +71,11 @@ import TriStateCheckbox from 'primevue/tristatecheckbox';
 import CodeHighlight from './AppCodeHighlight';
 import Test from './components/Test'
 
+//import ProductService from './service/ProductService';
+
+//import UserContext from './service/UserContext.ts'
+
+
 import 'primevue/resources/themes/saga-blue/theme.css';
 import 'primevue/resources/primevue.min.css';
 import 'primeflex/primeflex.css';

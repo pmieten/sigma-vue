@@ -135,6 +135,11 @@ const routes = [
         component: () => import('./utilities/Typography.vue'),
     },
     {
+        path: '/login',
+        name: 'login',
+        component: () => import('./pages/Login.vue'),
+    },
+    {
         path: '/crud',
         name: 'crud',
         component: () => import('./pages/CrudDemo.vue'),

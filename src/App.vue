@@ -77,6 +77,7 @@ export default {
 				{
 					label: 'Pages', icon: 'pi pi-fw pi-clone',
 					items: [
+                        {label: 'Login', icon: 'pi pi-fw pi-user-edit', to: '/login'},
 						{label: 'Crud', icon: 'pi pi-fw pi-user-edit', to: '/crud'},
 						{label: 'Calendar', icon: 'pi pi-fw pi-calendar-plus', to: '/calendar'},
 						{label: 'Empty Page', icon: 'pi pi-fw pi-circle-off', to: '/empty'}
@@ -212,6 +213,11 @@ export default {
                 return true;
             }
         },
+        isLogin(){
+            return false;
+        }
+
+
     },
     computed: {
         containerClass() {
@@ -237,9 +243,17 @@ export default {
     },
     beforeUpdate() {
         if (this.mobileMenuActive)
+        {
             this.addClass(document.body, 'body-overflow-hidden');
+        }
         else
+        {
             this.removeClass(document.body, 'body-overflow-hidden');
+        }
+        if(this.isLogin())
+        {
+            this.addClass
+        }
     },
     components: {
         'AppTopBar': AppTopBar,

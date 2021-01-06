@@ -45,4 +45,8 @@ https://www.npmjs.com/package/vue-separate-files-webpack-loader
 
 
 Login page:
-https://www.primefaces.org/apollo-vue/#/login
+https://www.primefaces.org/apollo-vue/#/login  - do skopiowanie z kodu
+
+
+Kontrolki:
+https://www.primefaces.org/primevue/

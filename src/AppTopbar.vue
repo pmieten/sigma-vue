@@ -17,20 +17,44 @@
 				<span class="layout-topbar-item-text">Settings</span>
 				<span class="layout-topbar-icon pi pi-cog"></span>
 			</button>
-			<button class="p-link">
+			<button class="p-link" @click="toggleMenuProfile" >
 				<span class="layout-topbar-item-text">User</span>
 				<span class="layout-topbar-icon pi pi-user"></span>
 			</button>
+			
 		</div>
 	</div>
+	<Menu id="overlay_menu" ref="menu" :model="items" :popup="true" />	
 </template>
 
 <script>
+import ProductService from './service/ProductService';
+//import UserContext from './service/use'
+
 export default {
+	data(){
+		return{
+			items:[
+				{
+					label: 'Logout',
+					icon: 'pi  pi-power-off',
+					command: () => {
+						this.$toast.add({severity:'success', summary:'Updated', detail:'Data Updated', life: 3000});
+					}
+				}
+			]
+		}
+	},
     methods: {
         onMenuToggle(event) {
             this.$emit('menu-toggle', event);
-        }
+		},		
+		toggleMenuProfile(event) {
+			
+			this.$refs.menu.toggle(event);
+			var p=new ProductService();
+			p.getProductsSmall();
+		}
     }
 }
 </script>
